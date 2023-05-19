@@ -1,6 +1,6 @@
 import { Link} from "react-router-dom";
-import GameCard from "./GameCard";
 import {mygames} from "./Games";
+import GameTile from "./GameTile";
 
 //Har brukt https://github.com/joafjell/uin23ak4_moviesearch_fjell/blob/main/src/components/MoviesMainPage.js som inspirasjon
 
@@ -12,12 +12,11 @@ export default function MyFavourites(){
     return(
         <>
             <section>
-                <Link to="MyFavourites"><h2>Favourites</h2></Link>
+                <Link to="MyFavourites" className="link-text"><h2>Favourites</h2></Link>
                 <ul>
                     {favourite?.map((favourites, index) =>{
                         const {title, released, genres, img, link} = favourites
-                        return <GameCard key={index} title={title} released={released} genres={genres} img={img} link={link} slug={favourites?.favourites?.label.replace(/\s/g, "-").toLowerCase()}/>
-                        
+                        return <GameTile key={index} title={title} released={released} genres={genres} img={img} link={link} slug={favourites?.favourites?.label.replace(/\s/g, "-").toLowerCase()}/>
                     })}            
                 </ul>    
             </section>

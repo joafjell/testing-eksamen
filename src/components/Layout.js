@@ -4,25 +4,25 @@ export default function Layout(){
     return(
         <div className="container">
             <header>
-                <Link to="/">
+                <Link to="/" className="link-text">
                     <h1 className="title">MACs Gamehub</h1>
                 </Link>
                 <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/MyGames">My games</Link>
-                    </li>
-                    <li>
-                        <Link to="/MyFavourites">My fav</Link>
-                    </li>
-                    <li>  
-                        <Link to="/GameShop">Game shop</Link>
-                    </li> 
-                </ul>
-            </nav>
+                    <ul className="navigation">
+                        <li>
+                            <Link to="/" className="link-text">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/MyGames" className="link-text">My games</Link>
+                        </li>
+                        <li>
+                            <Link to="/MyFavourites" className="link-text">My fav</Link>
+                        </li>
+                        <li>  
+                            <Link to="/GameShop" className="link-text">Game shop</Link>
+                        </li> 
+                    </ul>
+                </nav>
             </header>
             <main>
                 <Outlet />
